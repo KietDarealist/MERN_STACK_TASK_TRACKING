@@ -1,0 +1,54 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username":"vito",
+    "password": "vito"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username":"michale",
+    "password": "mike"
+}
+
+
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTI2MjMxOThlNzgwMjQ0MTQ3NWY4NGQiLCJpYXQiOjE2Mjk5ODk3NDF9.cJgXxbo10NUbOAvnzOleIC7CeHL4OQc9yWmhte18NhQ
+
+{
+    "title": "AWS Kit",
+    "description":"Cloud Computing",
+    "url": "aws.org",
+    "status": "LEARNED"
+}
+
+###
+
+PUT http://localhost:5000/api/posts/612623488e7802441475f84f
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTI2MjMxOThlNzgwMjQ0MTQ3NWY4NGQiLCJpYXQiOjE2Mjk5MDE0NDR9.Uk0aHKCaobbUCylPvUH0IixbVWozmG-IP7gVUpsclHM
+
+{
+  "title": "Vue",
+  "description": "VUEEEEE",
+  "url": "https://vuejs.org",
+  "status": "LEARNING"
+}
+
+###
+
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTI2MjMxOThlNzgwMjQ0MTQ3NWY4NGQiLCJpYXQiOjE2Mjk5MDE0NDR9.Uk0aHKCaobbUCylPvUH0IixbVWozmG-IP7gVUpsclHM
+
+
+###
+DELETE http://localhost:5000/api/posts/612623488e7802441475f84f
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTI2MjMxOThlNzgwMjQ0MTQ3NWY4NGQiLCJpYXQiOjE2Mjk5MDE0NDR9.Uk0aHKCaobbUCylPvUH0IixbVWozmG-IP7gVUpsclHM
